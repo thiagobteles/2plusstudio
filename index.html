@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Palavra do Dia — publicação de devocionais em vídeo curto</title>
+<meta name="description" content="Ferramenta pessoal que publica devocionais em vídeo curto no perfil do próprio criador no TikTok.">
+<style>
+/* Estilo comum das 3 páginas do site do app "A Palavra do Dia".
+   Simples de propósito: página institucional/legal não precisa de firula, e o revisor do TikTok
+   tem de achar a informação rápido. */
+:root {
+  --tinta: #17202e;
+  --tinta-fraca: #5a6675;
+  --linha: #e3e7ec;
+  --fundo: #ffffff;
+  --realce: #1e2b5e;   /* azul-noite da marca (banner_graca.png) */
+  --ouro: #b8891f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.topo {
+  background: linear-gradient(160deg, #0b1436 0%, #1e2b5e 60%, #6b5220 100%);
+  color: #fff;
+  padding: 34px 20px;
+}
+.caixa { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+.topo .caixa { padding: 0 20px; }
+.topo h1 { margin: 0 0 6px; font-size: 1.5rem; letter-spacing: .2px; }
+.topo p { margin: 0; color: #d7ddea; font-size: .95rem; }
+main { padding: 34px 0 60px; }
+h2 { font-size: 1.15rem; margin: 30px 0 8px; color: var(--realce); }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+p, li { color: var(--tinta); }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+a { color: var(--realce); }
+.meta { color: var(--tinta-fraca); font-size: .88rem; }
+.aviso {
+  border-left: 3px solid var(--ouro);
+  background: #fdf8ec;
+  padding: 12px 16px;
+  margin: 18px 0;
+  font-size: .93rem;
+}
+.en { border-top: 1px solid var(--linha); margin-top: 44px; padding-top: 8px; }
+.en h2, .en h3 { color: var(--tinta-fraca); }
+nav { margin-top: 14px; font-size: .9rem; }
+nav a { color: #cdd6e8; margin-right: 16px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+footer {
+  border-top: 1px solid var(--linha);
+  padding: 20px;
+  text-align: center;
+  color: var(--tinta-fraca);
+  font-size: .85rem;
+}
+@media (max-width: 520px) { .topo h1 { font-size: 1.25rem; } }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="caixa">
+    <h1>A Palavra do Dia</h1>
+    <p>Ferramenta de publicação de devocionais em vídeo curto</p>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="termos.html">Termos de Serviço</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<main class="caixa">
+  <h2>O que é</h2>
+  <p>
+    <strong>A Palavra do Dia</strong> é uma ferramenta de uso pessoal, executada localmente no
+    computador do próprio criador de conteúdo. Ela publica no TikTok os vídeos devocionais curtos
+    que esse mesmo criador produz — versículos bíblicos narrados, com duração de 30 a 60 segundos,
+    no formato vertical.
+  </p>
+
+  <h2>Como funciona</h2>
+  <ul>
+    <li>Os vídeos são produzidos antes, fora do TikTok, e ficam salvos no computador do criador.</li>
+    <li>O criador autoriza a ferramenta na sua própria conta do TikTok, pelo Login Kit (OAuth).</li>
+    <li>A ferramenta envia o arquivo de vídeo para o perfil <em>dessa mesma conta</em>, usando a
+      Content Posting API.</li>
+    <li>Não há servidor, não há outros usuários e não há publicação em contas de terceiros.</li>
+  </ul>
+
+  <h2>Escopos usados no TikTok</h2>
+  <ul>
+    <li><code>user.info.basic</code> — apenas para confirmar qual conta está conectada, evitando
+      publicar no perfil errado.</li>
+    <li><code>video.publish</code> — para publicar o vídeo diretamente no perfil do criador.</li>
+    <li><code>video.upload</code> — para, quando preferido, enviar o vídeo como rascunho e concluir
+      a publicação pelo próprio aplicativo do TikTok.</li>
+  </ul>
+
+  <h2>Quem opera</h2>
+  <p>
+    A ferramenta é mantida por <strong>2PLus Studio</strong> e usada exclusivamente pelo criador do
+    canal <em>A Palavra do Dia</em>. Não é distribuída a terceiros nem oferecida como serviço.
+  </p>
+
+  <h2>Contato</h2>
+  <p class="meta">Dúvidas ou solicitações: <a href="mailto:www.thiagobteles@gmail.com">www.thiagobteles@gmail.com</a></p>
+
+  <div class="en">
+    <h2>In English</h2>
+    <p>
+      <strong>A Palavra do Dia</strong> ("The Word of the Day") is a personal, locally run tool that
+      publishes short devotional videos to the content creator's <em>own</em> TikTok profile. The
+      videos are produced beforehand and stored on the creator's computer.
+    </p>
+    <p>
+      The creator authorizes the tool on their own TikTok account via Login Kit (OAuth), and the tool
+      uploads the video file to that same account through the Content Posting API. There is no
+      server, no other users, and no posting to third-party accounts.
+    </p>
+    <p>
+      Scopes: <code>user.info.basic</code> (confirm which account is connected),
+      <code>video.publish</code> (post to the creator's own profile), and
+      <code>video.upload</code> (send as a draft when preferred).
+    </p>
+    <p>
+      Maintained by <strong>2PLus Studio</strong> and used solely by the creator of the
+      <em>A Palavra do Dia</em> channel. Not distributed to third parties and not offered as a
+      service.
+    </p>
+  </div>
+</main>
+
+<footer>
+  2PLus Studio · <a href="termos.html">Termos de Serviço</a> ·
+  <a href="privacidade.html">Política de Privacidade</a>
+</footer>
+</body>
+</html>

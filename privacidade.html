@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — A Palavra do Dia</title>
+<style>
+/* Estilo comum das 3 páginas do site do app "A Palavra do Dia".
+   Simples de propósito: página institucional/legal não precisa de firula, e o revisor do TikTok
+   tem de achar a informação rápido. */
+:root {
+  --tinta: #17202e;
+  --tinta-fraca: #5a6675;
+  --linha: #e3e7ec;
+  --fundo: #ffffff;
+  --realce: #1e2b5e;   /* azul-noite da marca (banner_graca.png) */
+  --ouro: #b8891f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.topo {
+  background: linear-gradient(160deg, #0b1436 0%, #1e2b5e 60%, #6b5220 100%);
+  color: #fff;
+  padding: 34px 20px;
+}
+.caixa { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+.topo .caixa { padding: 0 20px; }
+.topo h1 { margin: 0 0 6px; font-size: 1.5rem; letter-spacing: .2px; }
+.topo p { margin: 0; color: #d7ddea; font-size: .95rem; }
+main { padding: 34px 0 60px; }
+h2 { font-size: 1.15rem; margin: 30px 0 8px; color: var(--realce); }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+p, li { color: var(--tinta); }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+a { color: var(--realce); }
+.meta { color: var(--tinta-fraca); font-size: .88rem; }
+.aviso {
+  border-left: 3px solid var(--ouro);
+  background: #fdf8ec;
+  padding: 12px 16px;
+  margin: 18px 0;
+  font-size: .93rem;
+}
+.en { border-top: 1px solid var(--linha); margin-top: 44px; padding-top: 8px; }
+.en h2, .en h3 { color: var(--tinta-fraca); }
+nav { margin-top: 14px; font-size: .9rem; }
+nav a { color: #cdd6e8; margin-right: 16px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+footer {
+  border-top: 1px solid var(--linha);
+  padding: 20px;
+  text-align: center;
+  color: var(--tinta-fraca);
+  font-size: .85rem;
+}
+@media (max-width: 520px) { .topo h1 { font-size: 1.25rem; } }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="caixa">
+    <h1>Política de Privacidade</h1>
+    <p>A Palavra do Dia · 2PLus Studio</p>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="termos.html">Termos de Serviço</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<main class="caixa">
+  <p class="meta">Última atualização: 22 de agosto de 2026</p>
+
+  <div class="aviso">
+    <strong>Resumo:</strong> a Ferramenta é usada por uma única pessoa — o dono da conta — e roda no
+    computador dela. Não há servidor, não há cadastro, não há coleta de dados de outras pessoas e
+    nada é compartilhado, vendido ou usado para publicidade.
+  </div>
+
+  <h2>1. Quem somos</h2>
+  <p>
+    <strong>A Palavra do Dia</strong> ("a Ferramenta") é mantida por <strong>2PLus Studio</strong>.
+    É um programa de uso pessoal, executado localmente, que publica vídeos devocionais curtos no
+    perfil do TikTok do próprio operador.
+  </p>
+
+  <h2>2. Quais dados são tratados</h2>
+  <p>A Ferramenta trata apenas o mínimo necessário para publicar na conta do próprio operador:</p>
+  <ul>
+    <li><strong>Token de acesso e token de renovação</strong> do TikTok, obtidos quando o operador
+      autoriza a Ferramenta na própria conta.</li>
+    <li><strong>Identificador da conta</strong> (<code>open_id</code>), para direcionar a publicação
+      ao perfil correto.</li>
+    <li><strong>Informações básicas do perfil</strong> (nome de exibição, foto, nome de usuário),
+      obtidas pelo escopo <code>user.info.basic</code> e usadas apenas para mostrar ao operador qual
+      conta está conectada, evitando publicar no perfil errado.</li>
+    <li><strong>Arquivos de vídeo e legendas</strong> criados pelo próprio operador, enviados ao
+      TikTok no momento da publicação.</li>
+  </ul>
+
+  <h2>3. O que NÃO é coletado</h2>
+  <ul>
+    <li>Nenhum dado de seguidores, espectadores ou de qualquer outra pessoa.</li>
+    <li>Nenhum dado de navegação, localização, contatos ou dispositivo.</li>
+    <li>Nenhuma senha do TikTok — a autenticação é feita pelo próprio TikTok, via OAuth, e a
+      Ferramenta nunca vê a senha do operador.</li>
+  </ul>
+
+  <h2>4. Onde os dados ficam</h2>
+  <p>
+    Os tokens e o identificador da conta ficam <strong>somente no computador do operador</strong>,
+    em arquivo local de acesso restrito. Não existe servidor, banco de dados remoto ou serviço em
+    nuvem operado por nós. Nada é transmitido para nenhum destino além do próprio TikTok, no momento
+    da publicação.
+  </p>
+
+  <h2>5. Compartilhamento</h2>
+  <p>
+    Não compartilhamos, vendemos, alugamos nem cedemos dados a terceiros. Não há publicidade, não há
+    rastreamento e não há análise de comportamento.
+  </p>
+
+  <h2>6. Por quanto tempo</h2>
+  <p>
+    Os tokens permanecem no computador do operador enquanto a autorização estiver ativa. São
+    apagados quando o operador exclui o arquivo local de credenciais ou revoga a autorização no
+    TikTok — o que ocorrer primeiro.
+  </p>
+
+  <h2>7. Como revogar e apagar</h2>
+  <ul>
+    <li><strong>Revogar o acesso:</strong> no aplicativo do TikTok, em
+      <em>Configurações e privacidade → Segurança e permissões → Gerenciar permissões de
+      aplicativos</em>, remova a autorização de "A Palavra do Dia".</li>
+    <li><strong>Apagar os dados locais:</strong> exclua o arquivo de credenciais no computador. Sem
+      ele, a Ferramenta perde qualquer acesso à conta.</li>
+  </ul>
+
+  <h2>8. Direitos do titular</h2>
+  <p>
+    Como o único titular dos dados tratados é o próprio operador, e os dados ficam na máquina dele,
+    o acesso, a correção e a exclusão são feitos diretamente por ele, pelos meios descritos acima.
+    Ainda assim, pedidos relacionados à LGPD podem ser enviados para o contato abaixo.
+  </p>
+
+  <h2>9. Menores de idade</h2>
+  <p>A Ferramenta não se destina a menores de 18 anos e não coleta dados de crianças.</p>
+
+  <h2>10. Alterações</h2>
+  <p>
+    Esta política pode ser atualizada. A data de "última atualização" no topo indica a versão
+    vigente.
+  </p>
+
+  <h2>11. Contato</h2>
+  <p>
+    Dúvidas ou solicitações sobre privacidade:
+    <a href="mailto:www.thiagobteles@gmail.com">www.thiagobteles@gmail.com</a>
+  </p>
+
+  <div class="en">
+    <h2>Privacy Policy (English summary)</h2>
+    <p><em>Last updated: August 22, 2026</em></p>
+    <p>
+      <strong>Summary:</strong> the Tool is used by a single person — the account owner — and runs on
+      their own computer. There is no server, no sign-up, no collection of anyone else's data, and
+      nothing is shared, sold or used for advertising.
+    </p>
+    <h3>Data processed</h3>
+    <ul>
+      <li>TikTok <strong>access and refresh tokens</strong>, obtained when the operator authorizes the
+        Tool on their own account.</li>
+      <li><strong>Account identifier</strong> (<code>open_id</code>), to target the correct profile.</li>
+      <li><strong>Basic profile info</strong> (display name, avatar, username) via
+        <code>user.info.basic</code>, shown to the operator only to confirm which account is
+        connected.</li>
+      <li><strong>Video files and captions</strong> created by the operator, sent to TikTok at the
+        moment of publishing.</li>
+    </ul>
+    <h3>Not collected</h3>
+    <p>
+      No data about followers, viewers or any other person. No browsing, location, contacts or device
+      data. No TikTok password — authentication happens on TikTok via OAuth and the Tool never sees
+      it.
+    </p>
+    <h3>Storage</h3>
+    <p>
+      Tokens and the account identifier are stored <strong>only on the operator's computer</strong>,
+      in a restricted local file. We operate no server, remote database or cloud service. Nothing is
+      transmitted anywhere other than TikTok itself, at publishing time.
+    </p>
+    <h3>Sharing and retention</h3>
+    <p>
+      No sharing, selling or renting of data to third parties. No advertising or tracking. Tokens
+      remain on the operator's computer while the authorization is active and are removed when the
+      operator deletes the local credentials file or revokes access on TikTok, whichever comes first.
+    </p>
+    <h3>Revoking access</h3>
+    <p>
+      In the TikTok app: <em>Settings and privacy → Security and permissions → Manage app
+      permissions</em>, then remove "A Palavra do Dia". Deleting the local credentials file also ends
+      all access.
+    </p>
+    <h3>Children</h3>
+    <p>The Tool is not intended for people under 18 and does not collect children's data.</p>
+    <h3>Contact</h3>
+    <p><a href="mailto:www.thiagobteles@gmail.com">www.thiagobteles@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>
+  2PLus Studio · <a href="index.html">Início</a> ·
+  <a href="termos.html">Termos de Serviço</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de Serviço — A Palavra do Dia</title>
+<style>
+/* Estilo comum das 3 páginas do site do app "A Palavra do Dia".
+   Simples de propósito: página institucional/legal não precisa de firula, e o revisor do TikTok
+   tem de achar a informação rápido. */
+:root {
+  --tinta: #17202e;
+  --tinta-fraca: #5a6675;
+  --linha: #e3e7ec;
+  --fundo: #ffffff;
+  --realce: #1e2b5e;   /* azul-noite da marca (banner_graca.png) */
+  --ouro: #b8891f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.topo {
+  background: linear-gradient(160deg, #0b1436 0%, #1e2b5e 60%, #6b5220 100%);
+  color: #fff;
+  padding: 34px 20px;
+}
+.caixa { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+.topo .caixa { padding: 0 20px; }
+.topo h1 { margin: 0 0 6px; font-size: 1.5rem; letter-spacing: .2px; }
+.topo p { margin: 0; color: #d7ddea; font-size: .95rem; }
+main { padding: 34px 0 60px; }
+h2 { font-size: 1.15rem; margin: 30px 0 8px; color: var(--realce); }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+p, li { color: var(--tinta); }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+a { color: var(--realce); }
+.meta { color: var(--tinta-fraca); font-size: .88rem; }
+.aviso {
+  border-left: 3px solid var(--ouro);
+  background: #fdf8ec;
+  padding: 12px 16px;
+  margin: 18px 0;
+  font-size: .93rem;
+}
+.en { border-top: 1px solid var(--linha); margin-top: 44px; padding-top: 8px; }
+.en h2, .en h3 { color: var(--tinta-fraca); }
+nav { margin-top: 14px; font-size: .9rem; }
+nav a { color: #cdd6e8; margin-right: 16px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+footer {
+  border-top: 1px solid var(--linha);
+  padding: 20px;
+  text-align: center;
+  color: var(--tinta-fraca);
+  font-size: .85rem;
+}
+@media (max-width: 520px) { .topo h1 { font-size: 1.25rem; } }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="caixa">
+    <h1>Termos de Serviço</h1>
+    <p>A Palavra do Dia · 2PLus Studio</p>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="termos.html">Termos de Serviço</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<main class="caixa">
+  <p class="meta">Última atualização: 22 de agosto de 2026</p>
+
+  <h2>1. O que estes termos cobrem</h2>
+  <p>
+    Estes termos regem o uso da ferramenta <strong>A Palavra do Dia</strong> ("a Ferramenta"),
+    mantida por <strong>2PLus Studio</strong> ("nós"). A Ferramenta é um programa de uso pessoal,
+    executado localmente no computador do criador de conteúdo, que publica vídeos devocionais curtos
+    no perfil do TikTok <em>desse mesmo criador</em>.
+  </p>
+
+  <h2>2. Quem pode usar</h2>
+  <p>
+    A Ferramenta é de uso exclusivo do seu operador — o titular da conta do TikTok em que os vídeos
+    são publicados. Ela não é distribuída ao público, não é oferecida como serviço a terceiros e não
+    permite publicar em contas que não sejam a do próprio operador.
+  </p>
+
+  <h2>3. O que a Ferramenta faz</h2>
+  <ul>
+    <li>Recebe autorização do operador na conta dele, pelo Login Kit (OAuth) do TikTok.</li>
+    <li>Envia arquivos de vídeo, já produzidos e armazenados localmente, para o perfil dessa conta,
+      pela Content Posting API.</li>
+    <li>Consulta informações básicas do perfil apenas para confirmar em qual conta a publicação será
+      feita.</li>
+  </ul>
+
+  <h2>4. Responsabilidade pelo conteúdo</h2>
+  <p>
+    Todo o conteúdo publicado é de autoria e responsabilidade do operador. Os vídeos consistem em
+    textos bíblicos narrados e imagens de paisagem licenciadas para uso. O operador é o único
+    responsável por garantir que o conteúdo publicado cumpra as
+    <a href="https://www.tiktok.com/community-guidelines" target="_blank" rel="noopener">Diretrizes
+    da Comunidade</a> e os
+    <a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener">Termos de
+    Serviço</a> do TikTok, além da legislação aplicável.
+  </p>
+
+  <h2>5. Uso aceitável</h2>
+  <p>Ao usar a Ferramenta, o operador se compromete a não:</p>
+  <ul>
+    <li>publicar conteúdo ilegal, enganoso, ofensivo ou que viole direitos de terceiros;</li>
+    <li>usar a Ferramenta para publicar em conta que não lhe pertença ou sem autorização;</li>
+    <li>tentar contornar limites, cotas ou mecanismos de segurança das APIs do TikTok;</li>
+    <li>usar a Ferramenta para spam ou publicação automatizada em massa.</li>
+  </ul>
+
+  <h2>6. Relação com o TikTok</h2>
+  <p>
+    A Ferramenta usa APIs públicas do TikTok, mas não é produto do TikTok, não é afiliada a ele e
+    não é por ele endossada. O TikTok pode alterar ou encerrar o acesso às suas APIs a qualquer
+    momento, o que pode interromper o funcionamento da Ferramenta.
+  </p>
+
+  <h2>7. Sem garantias</h2>
+  <p>
+    A Ferramenta é fornecida "como está", sem garantias de disponibilidade, de resultado ou de
+    adequação a qualquer finalidade específica. Não garantimos que uma publicação será concluída,
+    nem respondemos por conteúdo que deixe de ser publicado por falha técnica, indisponibilidade das
+    APIs ou decisão do TikTok.
+  </p>
+
+  <h2>8. Limitação de responsabilidade</h2>
+  <p>
+    Na máxima extensão permitida pela lei, não respondemos por danos indiretos, incidentais ou
+    lucros cessantes decorrentes do uso ou da impossibilidade de uso da Ferramenta.
+  </p>
+
+  <h2>9. Encerramento</h2>
+  <p>
+    O operador pode encerrar o uso a qualquer momento, revogando a autorização nas configurações da
+    sua conta do TikTok e apagando as credenciais locais. Isso interrompe imediatamente qualquer
+    acesso da Ferramenta à conta.
+  </p>
+
+  <h2>10. Alterações</h2>
+  <p>
+    Estes termos podem ser atualizados. A data de "última atualização" no topo indica a versão
+    vigente.
+  </p>
+
+  <h2>11. Lei aplicável e contato</h2>
+  <p>
+    Aplica-se a legislação brasileira. Contato:
+    <a href="mailto:www.thiagobteles@gmail.com">www.thiagobteles@gmail.com</a>
+  </p>
+
+  <div class="en">
+    <h2>Terms of Service (English summary)</h2>
+    <p><em>Last updated: August 22, 2026</em></p>
+    <p>
+      <strong>A Palavra do Dia</strong> ("the Tool"), maintained by <strong>2PLus Studio</strong>,
+      is a personal, locally run program that publishes short devotional videos to the operator's
+      <em>own</em> TikTok profile. It is not distributed to the public and cannot post to accounts
+      other than the operator's own.
+    </p>
+    <h3>What it does</h3>
+    <ul>
+      <li>Obtains the operator's authorization on their own account via TikTok Login Kit (OAuth).</li>
+      <li>Uploads locally stored video files to that account through the Content Posting API.</li>
+      <li>Reads basic profile info only to confirm which account will receive the post.</li>
+    </ul>
+    <h3>Content responsibility</h3>
+    <p>
+      All published content is authored by and is the sole responsibility of the operator, who must
+      ensure it complies with TikTok's Community Guidelines and Terms of Service and with applicable
+      law.
+    </p>
+    <h3>Acceptable use</h3>
+    <p>
+      The operator must not publish unlawful, misleading or infringing content, post to accounts they
+      do not own, circumvent TikTok API limits or safeguards, or use the Tool for spam or mass
+      automated posting.
+    </p>
+    <h3>Relationship with TikTok</h3>
+    <p>
+      The Tool uses TikTok's public APIs but is not a TikTok product and is not affiliated with or
+      endorsed by TikTok. TikTok may change or discontinue API access at any time.
+    </p>
+    <h3>No warranty and limitation of liability</h3>
+    <p>
+      The Tool is provided "as is", without warranties of availability, outcome or fitness for a
+      particular purpose. To the maximum extent permitted by law, we are not liable for indirect or
+      incidental damages arising from use of, or inability to use, the Tool.
+    </p>
+    <h3>Termination</h3>
+    <p>
+      The operator may stop using the Tool at any time by revoking authorization in their TikTok
+      account settings and deleting the local credentials, which immediately ends the Tool's access.
+    </p>
+    <h3>Governing law and contact</h3>
+    <p>Brazilian law applies. Contact: <a href="mailto:www.thiagobteles@gmail.com">www.thiagobteles@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>
+  2PLus Studio · <a href="index.html">Início</a> ·
+  <a href="privacidade.html">Política de Privacidade</a>
+</footer>
+</body>
+</html>
