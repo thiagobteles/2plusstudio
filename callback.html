@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Autorização concluída — A Palavra do Dia</title>
+<style>
+/* Página de retorno do OAuth do TikTok.
+   Existe porque o portal do TikTok RECUSA localhost como redirect URI
+   ("Enter a valid redirect uri (localhost is not supported)"), e também recusa 127.0.0.1.
+   Então o TikTok devolve o código AQUI, num endereço https público, e esta página o repassa
+   para o servidorzinho local que a ferramenta sobe em http://localhost:8080/callback.
+   Navegar de https:// para http://localhost é permitido: a regra de conteúdo misto vale para
+   sub-recursos, não para navegação de topo. */
+:root {
+  --tinta: #17202e; --tinta-fraca: #5a6675; --linha: #e3e7ec;
+  --fundo: #ffffff; --realce: #1e2b5e; --ouro: #b8891f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--fundo); color: var(--tinta);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 24px;
+}
+.cartao { max-width: 560px; width: 100%; }
+h1 { font-size: 1.35rem; margin: 0 0 10px; color: var(--realce); }
+p { margin: 10px 0; }
+.meta { color: var(--tinta-fraca); font-size: .9rem; }
+.caixa {
+  border-left: 3px solid var(--ouro); background: #fdf8ec;
+  padding: 12px 16px; margin: 18px 0; font-size: .93rem;
+}
+code {
+  display: block; word-break: break-all; background: #f4f6f9;
+  border: 1px solid var(--linha); border-radius: 6px; padding: 10px 12px;
+  font: 13px/1.5 ui-monospace, Consolas, monospace; margin-top: 8px;
+}
+a.botao {
+  display: inline-block; margin-top: 12px; padding: 10px 18px; border-radius: 6px;
+  background: var(--realce); color: #fff; text-decoration: none; font-size: .95rem;
+}
+.erro { color: #9b1c1c; }
+</style>
+</head>
+<body>
+<div class="cartao" id="alvo">
+  <h1>Processando…</h1>
+  <p class="meta">Devolvendo a autorização para a ferramenta local.</p>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var destino = 'http://localhost:8080/callback' + location.search;
+  var alvo = document.getElementById('alvo');
+
+  function render(html) { alvo.innerHTML = html; }
+
+  if (q.has('code')) {
+    // repassa para o servidor local; se ele não estiver de pé, o navegador mostra erro
+    // de conexão e o usuário ainda tem o código à mão no fallback abaixo.
+    render(
+      '<h1>Autorização concluída</h1>' +
+      '<p>Devolvendo o código para a ferramenta no seu computador…</p>' +
+      '<div class="caixa"><strong>Não voltou sozinho?</strong> O programa precisa estar rodando ' +
+      '(<code>py tools/tiktok_oauth.py</code>) e escutando na porta 8080. Use o botão abaixo.</div>' +
+      '<a class="botao" href="' + destino.replace(/"/g, '&quot;') + '">Concluir manualmente</a>'
+    );
+    location.replace(destino);
+    return;
+  }
+
+  if (q.has('error') || q.has('error_description')) {
+    render(
+      '<h1 class="erro">O TikTok recusou a autorização</h1>' +
+      '<p class="meta">Mensagem devolvida:</p>' +
+      '<code>' + (q.get('error_description') || q.get('error') || '') .replace(/[<>&]/g, '') + '</code>' +
+      '<p class="meta">Feche esta aba e tente de novo pelo terminal.</p>'
+    );
+    return;
+  }
+
+  // sem code e sem error: alguém abriu a página direto. Não redireciona nada.
+  render(
+    '<h1>Página de retorno</h1>' +
+    '<p>Esta página só é usada no meio do login do TikTok, para devolver a autorização ' +
+    'à ferramenta “A Palavra do Dia”. Não há nada para ver aqui.</p>' +
+    '<p class="meta"><a href="index.html">Ir para a página inicial</a></p>'
+  );
+})();
+</script>
+</body>
+</html>
